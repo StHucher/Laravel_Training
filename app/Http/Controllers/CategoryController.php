@@ -17,4 +17,11 @@ class CategoryController extends Controller
 
         return view('categoriesList', ['categories' => $categories]);
     }
+
+    public function item($id)
+    {
+        $item = Category::find($id);
+
+        return view('categoriesItem', ['item' =>$item]);
+    }
 }
