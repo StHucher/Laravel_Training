@@ -24,3 +24,10 @@ $router->get('/',
         'as' =>'main-home'
     ]
 );
+
+$router->get('/categories',
+    [
+        'uses'=>'CategoryController@list',
+        'as' =>'categories-list'
+    ]
+);
