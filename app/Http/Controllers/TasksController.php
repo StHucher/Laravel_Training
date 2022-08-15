@@ -13,4 +13,11 @@ class TasksController extends Controller
         return view('tasksList', ['tasks'=>$tasksList]);
 
     }
+
+    public function item($id)
+    {
+        $taskItem = Task::find($id);
+
+        return view('taskItem', ['Items' => $taskItem]);
+    }
 }

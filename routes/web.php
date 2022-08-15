@@ -45,3 +45,10 @@ $router->get('/tasks',
         'as' =>'task-list'
     ]
 );
+
+$router->get('/tasks/{id}',
+    [
+        'uses' => 'TasksController@item',
+        'as' => 'task-item'
+    ]
+);
