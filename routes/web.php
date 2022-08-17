@@ -59,3 +59,8 @@ $router->get('/formtasks',
         'as' =>'display-form'
     ]
 );
+
+$router->post('/formtasks',
+    [   'uses'=>"TasksController@add",
+        'as' =>'add-task'
+]);

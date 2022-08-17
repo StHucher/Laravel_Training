@@ -24,17 +24,18 @@
         <h1>Form to create one task</h1>
 
             <form action="" method="post">
+                @csrf
                 <div>
                     <label for ="title">Your task:</label>
                     <input type="text" id="title" name="task-title">
                 </div>
                 <div>
-                    <select>
-                        <option value="">Please choose a categorie</option>
-                        <option value="Chemin vers O'clock">Chemin vers O'clock</option>
-                        <option value="Courses">Courses</option>
-                        <option value="Formation O'clock">Formation O'clock</option>
-                        <option value="Titre Professionnel">Titre Professionnel</option>
+                    <select name="category_id">
+                        <option value="0">Please choose a categorie</option>
+                        <option value="1">Chemin vers O'clock</option>
+                        <option value="2">Courses</option>
+                        <option value="3">Formation O'clock</option>
+                        <option value="4">Titre Professionnel</option>
                     </select>
                 </div>
                 <div class ="button">
