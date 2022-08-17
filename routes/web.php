@@ -52,3 +52,10 @@ $router->get('/tasks/{id}',
         'as' => 'task-item'
     ]
 );
+
+$router->get('/formtasks',
+    [
+        'uses'=>'TasksController@form',
+        'as' =>'display-form'
+    ]
+);

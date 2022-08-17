@@ -20,4 +20,9 @@ class TasksController extends Controller
 
         return view('taskItem', ['Items' => $taskItem]);
     }
+
+    public function form()
+    {
+        return view('formTasks',[]);
+    }
 }
