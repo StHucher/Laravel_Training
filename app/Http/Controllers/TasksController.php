@@ -46,12 +46,13 @@ class TasksController extends Controller
             $newTask->category_id = $category_id;
             /*I save in the DB the new object and return the message*/
             if ($newTask->save()) {
-            return 'Succes';
+            /*When I save I return on the route 'formtasks' with the key status and a message 'Task created'*/
+            return redirect('formtasks')->with('status', 'Task created!');
 
-            //TODO redirection to the form
-            //TODO manage the optionnel properties
-
+            }else{ /*if I can't save*/
+                return redirect('formtasks')->with('alert', 'Error');
             }
+            //TODO manage the optionnel properties
         }
 
 

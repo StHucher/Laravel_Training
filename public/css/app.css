@@ -24,3 +24,12 @@ input, select {
     box-sizing: border-box;
     border: 2px solid #999;
 }
+
+.alert{
+    width:20%;
+    margin: auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}

@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/app.css"> <!--In Laravel 8 we put css folder in public/css/app.css-->
+
 
         <title>Laravel</title>
 
@@ -22,6 +24,23 @@
     </head>
     <body class="antialiased">
         <h1>Form to create one task</h1>
+
+<!-- We dispay a message flash when we manage the form is submited -->
+        @if (session('status'))
+
+                <div class="alert alert-success mt-1 mb-5">
+                    {{ session('status') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+        @endif
+
+        @if (session('alert'))
+
+                <div class="alert alert-danger mt-1 mb-5">
+                    {{ session('alerte') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+        @endif
 
             <form action="" method="post">
                 @csrf
@@ -45,5 +64,9 @@
 
 
 
+
+
     </body>
+    <!-- JavaScript Bundle with Popper to manage the closure of the message flash-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </html>
