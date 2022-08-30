@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/app.css"> <!--In Laravel 8 we put css folder in public/css/app.css-->
 
         <title>Laravel</title>
 
@@ -21,7 +23,15 @@
         </style>
     </head>
     <body class="antialiased">
+    <div class="menu">
         <h1>Stephane</h1>
+
+            <ul class="nav  justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active mt-5" href="/">Home</a>
+                </li>
+            </ul>
+    </div>
 
         @foreach ($categories as $categorie)
             <ul>
