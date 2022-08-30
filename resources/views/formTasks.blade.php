@@ -62,6 +62,12 @@
                 </div>
             </form>
 
+        <ul class="nav  justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active mt-5" href="/">Home</a>
+            </li>
+        </ul>
+
 
 
 
